@@ -6,7 +6,7 @@ import java.util.Deque;
                       public static void main(String[] args) {
 
                           // Define the input string
-                          String input = "tirthapooja";
+                          String input = "tirthapooja"
 
                           // Create a Deque to store characters
                           Deque<Character> deque = new ArrayDeque<>();
