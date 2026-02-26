@@ -1,38 +1,19 @@
-import java.util.ArrayDeque;
-import java.util.Deque;
+public class Main {
 
-                  class UseCase7PalindromeCheckerApp {
+    public static void main(String[] args) {
+        // UC1: Application Entry & Welcome Message
 
-                      public static void main(String[] args) {
+        // Application details
+        String appName = "Palindrome Checker";
+        String appVersion = "v1.0";
 
-                          // Define the input string
-                          String input = "tirthapooja"
+        // Display welcome message
+        System.out.println("*************************************");
+        System.out.println("Welcome to " + appName + "!");
+        System.out.println("Version: " + appVersion);
+        System.out.println("*************************************");
 
-                          // Create a Deque to store characters
-                          Deque<Character> deque = new ArrayDeque<>();
-
-                          // Add each character to the deque
-                          for (char c : input.toCharArray()) {
-                              deque.addLast(c);
-                          }
-
-                          // Flag to track palindrome result
-                          boolean isPalindrome = true;
-
-                          // Continue comparison while more than one element exists
-                          while (deque.size() > 1) {
-
-                              char first = deque.removeFirst();
-                              char last = deque.removeLast();
-
-                              if (first != last) {
-                                  isPalindrome = false;
-                                  break;
-                              }
-                          }
-
-                          // Output result
-                          System.out.println("Input : " + input);
-                          System.out.println("Is Palindrome? : " + isPalindrome);
-                      }
-                  }
+        // Next steps (placeholder for other use cases)
+        System.out.println("Application is ready to process palindromes...");
+    }
+}
