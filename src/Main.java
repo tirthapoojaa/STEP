@@ -1,12 +1,38 @@
-                  gi
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+import java.util.ArrayDeque;
+import java.util.Deque;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
-    }
-}
+                  class UseCase7PalindromeCheckerApp {
+
+                      public static void main(String[] args) {
+
+                          // Define the input string
+                          String input = "tirthapooja";
+
+                          // Create a Deque to store characters
+                          Deque<Character> deque = new ArrayDeque<>();
+
+                          // Add each character to the deque
+                          for (char c : input.toCharArray()) {
+                              deque.addLast(c);
+                          }
+
+                          // Flag to track palindrome result
+                          boolean isPalindrome = true;
+
+                          // Continue comparison while more than one element exists
+                          while (deque.size() > 1) {
+
+                              char first = deque.removeFirst();
+                              char last = deque.removeLast();
+
+                              if (first != last) {
+                                  isPalindrome = false;
+                                  break;
+                              }
+                          }
+
+                          // Output result
+                          System.out.println("Input : " + input);
+                          System.out.println("Is Palindrome? : " + isPalindrome);
+                      }
+                  }
